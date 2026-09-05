@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sportsvaerksted seen from abroad</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 900px; margin: 0 auto; padding: 28px 20px 80px;
+         font: 16px/1.62 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  h1 { font-size: 27px; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 44px 0 6px; padding-top: 18px;
+       border-top: 1px solid rgba(128,128,128,.35); }
+  .sub { opacity: .7; margin: 0 0 26px; }
+  video { width: 100%; border-radius: 8px; background: #000; margin: 10px 0 4px;
+          border: 1px solid rgba(128,128,128,.3); }
+  .cap { font-size: 14px; opacity: .75; margin: 0 0 8px; }
+  .find { border-left: 4px solid #d9822b; padding: 2px 0 2px 14px; margin: 16px 0; }
+  .ok   { border-left: 4px solid #3a9a5c; padding: 2px 0 2px 14px; margin: 16px 0; }
+  code { background: rgba(128,128,128,.18); padding: 1px 5px; border-radius: 4px;
+         font-size: .92em; }
+  ul { padding-left: 22px; }
+  li { margin: 5px 0; }
+  .dl { font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Sportsvaerksted, seen from another country</h1>
+<p class="sub">Recorded 5 September 2026 from a machine in Falkenstein, Germany.
+Six clips: your website and your Facebook page, each visited as an English
+speaker, as a German speaker, and — as a control — as a Dane.</p>
+
+<p>The connection is genuinely foreign: a German IP address, nowhere near Denmark.
+The only things set by hand are the browser's language, its regional settings and
+its clock. That is exactly what a real visitor's browser tells a website about
+them, so this is what a real visitor gets. The black label in the top-left corner
+of each clip is mine, added so you can tell the clips apart — nothing else on
+screen was touched.</p>
+
+<h2>What I found</h2>
+
+<div class="ok">
+<strong>Your website behaves identically no matter where the visitor is from.</strong>
+I compared the full text of the page across all three visits: 67,448 characters
+each time, not one character different. No redirect, no language switch, no
+"we noticed you're abroad" popup. Nothing to fix — but also nothing adapting.
+</div>
+
+<div class="find">
+<strong>The Facebook reviews on your site stay in Danish, and there is no way to read them.</strong>
+The heading around them is English — "FORMER CLIENTS' REVIEWS OF US ON FACEBOOK
+(260+)", "4.8", "Over 260 Reviews", "Read them here!" — and then the reviews
+themselves are solid Danish: <em>"Tak for rigtig go' behandling igår…"</em>,
+<em>"Efter utallige besøg hos diverse fysioterapeuter, kiropraktorer og massører…"</em>.
+There is no translate button on them. An English speaker sees a 4.8 rating they
+cannot check, which is the one thing on the page most likely to convince them.
+</div>
+
+<div class="find">
+<strong>A logged-out Facebook visitor sees one post, then a wall.</strong>
+Not language — Facebook itself. After a few seconds a "See more from
+Sportsværkstedet" login box covers the page. Closing it buys a little more
+scrolling, then the posts below simply stop loading and sit there as empty grey
+rectangles. Anyone arriving from your website without a Facebook login gets
+almost nothing.
+</div>
+
+<div class="ok">
+<strong>Facebook does translate its own furniture, and converts your price range.</strong>
+The buttons, tabs and counts follow the visitor: "96% recommend (260 reviews)" /
+"Von 96 % empfohlen (260 Bewertungen)" / "96 % anbefalet (260 anmeldelser)".
+Your price band is shown as <code>£</code> to the English visitor, <code>€</code>
+to the German one and <code>Billig</code> to the Dane. Your own words — the
+intro, the posts, the comments — stay in Danish, and logged out Facebook offered
+no "See translation" link on any of them.
+</div>
+
+<h2>1 · Website — English-speaking visitor</h2>
+<video src="1-website-english.mp4" controls preload="metadata"></video>
+<p class="cap">en-GB · German connection. Watch from about 0:13 — the reviews
+carousel turns through several reviews, all Danish.</p>
+
+<h2>2 · Website — German-speaking visitor</h2>
+<video src="2-website-german.mp4" controls preload="metadata"></video>
+<p class="cap">de-DE · German connection. Identical to clip 1 in every respect.</p>
+
+<h2>3 · Website — Danish control</h2>
+<video src="3-website-danish-control.mp4" controls preload="metadata"></video>
+<p class="cap">da-DK · still a German connection. This is the comparison shot:
+if it looks the same as 1 and 2, that is because it is the same.</p>
+
+<h2>4 · Facebook — English-speaking visitor, not logged in</h2>
+<video src="4-facebook-english.mp4" controls preload="metadata"></video>
+<p class="cap">en-GB · German connection. The login box appears around 0:12; I
+close it the way a visitor would, and the feed below fails to fill in.</p>
+
+<h2>5 · Facebook — German-speaking visitor, not logged in</h2>
+<video src="5-facebook-german.mp4" controls preload="metadata"></video>
+<p class="cap">de-DE · German connection. Facebook's own interface is German;
+your posts are not.</p>
+
+<h2>6 · Facebook — Danish control, not logged in</h2>
+<video src="6-facebook-danish-control.mp4" controls preload="metadata"></video>
+<p class="cap">da-DK · German connection. Everything in Danish, including
+Facebook's own text — which is what you see, and why the problem is invisible
+from where you sit.</p>
+
+<h2>Two things worth knowing</h2>
+<ul>
+  <li><strong>I can only arrive from Germany.</strong> I have no connections in
+      other countries, so if anything on your site ever reacts to the visitor's
+      country rather than their language, Germany is the only one I can show you.
+      Nothing on your site appears to react to either, so it made no difference
+      here.</li>
+  <li><strong>Your host's firewall blocked me once.</strong> My first, non-browser
+      request to sportsvaerksted.com came back as
+      <code>455 Security Incident Detected</code> from Simply.com's firewall.
+      Every ordinary browser visit went straight through, so this is not
+      affecting your visitors — but it is worth knowing that something is sitting
+      in front of your site making that call.</li>
+</ul>
+
+<p class="dl">The clips are also downloadable on their own:
+<a href="1-website-english.mp4">1</a> ·
+<a href="2-website-german.mp4">2</a> ·
+<a href="3-website-danish-control.mp4">3</a> ·
+<a href="4-facebook-english.mp4">4</a> ·
+<a href="5-facebook-german.mp4">5</a> ·
+<a href="6-facebook-danish-control.mp4">6</a></p>
+
+</body>
+</html>
